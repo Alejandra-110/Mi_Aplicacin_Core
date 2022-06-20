@@ -19,10 +19,10 @@ public class BookEditorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_editor);
 
         EditText editText = findViewById(R.id.editText);
-        // Fetch data that is passed from MainActivity
+
         Intent intent = getIntent();
 
-        // Accessing the data using key and value
+
         noteId = intent.getIntExtra("noteId", -1);
         if (noteId != -1) {
             editText.setText(LoginActivity.notes.get(noteId));
@@ -37,7 +37,7 @@ public class BookEditorActivity extends AppCompatActivity {
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // add your code here
+
             }
 
             @Override
@@ -52,7 +52,7 @@ public class BookEditorActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                // add your code here
+
             }
         });
     }

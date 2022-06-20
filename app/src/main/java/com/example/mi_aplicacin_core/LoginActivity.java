@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.add_book) {
 
-            // Going from MainActivity to NotesEditorActivity
+
             Intent intent = new Intent(getApplicationContext(), BookEditorActivity.class);
             startActivity(intent);
             return true;
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             notes = new ArrayList(set);
         }
 
-        // Using custom listView Provided by Android Studio
+
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, notes);
 
         listView.setAdapter(arrayAdapter);
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                // Going from MainActivity to NotesEditorActivity
+                //Para que vaya del menú al menú de notas
                 Intent intent = new Intent(getApplicationContext(), BookEditorActivity.class);
                 intent.putExtra("noteId", i);
                 startActivity(intent);
@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 final int itemToDelete = i;
-                // To delete the data from the App
+                // Para borrar el dato del App (hacer condiciones de SÍ y NO)
                 new AlertDialog.Builder(LoginActivity.this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("¿Estás seguro?")
